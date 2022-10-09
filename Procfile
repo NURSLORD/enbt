@@ -1,0 +1,1 @@
+web: gunicorn SAT.wsgi --log-file -

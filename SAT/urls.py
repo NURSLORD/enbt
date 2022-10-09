@@ -15,6 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls.static import static
+from django.conf import settings
+
 from mainapp.views import index_set, about, contact, sat_set, ielts_set
 
 urlpatterns = [
@@ -25,3 +28,6 @@ urlpatterns = [
     path('ielts/', ielts_set, name='ielts'),
     path('contact/', contact, name='contact'),
 ]
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
