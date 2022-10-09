@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <main class="bg-light">
+
+        <div class="page-hero-section bg-image hero-mini"
+             style="background-image: url({% static 'assets/img/hero_mini.svg' %});">
+            <div class="hero-caption">
+                <div class="container fg-white h-100">
+                    <div class="row justify-content-center align-items-center text-center h-100">
+                        <div class="col-lg-6">
+                            <h3 class="mb-4 fw-medium">О нас</h3>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb breadcrumb-dark justify-content-center bg-transparent">
+                                    <li class="breadcrumb-item"><a href="{% url 'home' %}">Главная</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">О нас</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-section pt-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card-page">
+                            <h5 class="fg-primary">Наши ценности</h5>
+                            <hr>
+                            <p>Мы социальные ученики - мы учимся вместе. Мы расширяем возможности и вдохновляем наших
+                                учащихся, наших
+                                партнеров и самих себя на развитие благодаря силе обучения на протяжении всей жизни.</p>
+                            <p>Мы трансформируемы. Мы не видим пределов тому, чего мы можем достичь, используя наши
+                                индивидуальные и коллективные сильные стороны. Мы меняем мир своими идеями, идеями и
+                                уникальными взглядами.</p>
+
+                            <!-- Video -->
+                            <div class="text-center py-5">
+                                <embed class="embed-video" width="658" height="370"
+                                       src="https://www.youtube.com/embed/jJq14Ptvmxk"
+                                       title="Ulukmanapo - Волчий Вой (Official Music Video)" frameborder="0"
+                                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                       allowfullscreen>
+                            </div>
+
+                            <p>Мы экспериментальны. Нашими инновациями руководят данные, любопытство и случайные
+                                счастливые случаи. Мы создаем воодушевляющую среду, в которой мы учимся на своих
+                                неудачах и празднуем наши успехи.</p>
+                            <p>Мы целеустремленны. Мы много работаем, чтобы добиться успеха, потому что мы так увлечены
+                                нашей общей целью. По мере того как мы растем, растут и наши возможности в долгосрочной
+                                перспективе изменить жизнь миллионов людей во всем мире.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main> <!-- .bg-light -->
+
+
+{% endblock %}
