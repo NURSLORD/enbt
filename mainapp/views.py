@@ -33,11 +33,12 @@ def sat_set(request):
         name = request.POST['name']
         telegram = request.POST['telegram']
         phone = request.POST['phone']
+        course = 'SAT'
         text = f"""Новая заявка
 Имя : {name}
 Телеграм : {telegram}
 Номер телефона : {phone}
-Курс : SAT
+Курс : {course}
 Дата : {datetime.today()}"""
         base_url = f'https://api.telegram.org/bot5503829283:AAFSA7ItBst8xhf-Lg_9cqa8iPOPGe4HA2s/sendMessage?chat_id=-851393242&text={text}'
         requests.get(base_url)
@@ -55,11 +56,12 @@ def ielts_set(request):
         name = request.POST['name']
         telegram = request.POST['telegram']
         phone = request.POST['phone']
+        course = 'IELTS'
         text = f"""Новая заявка
 Имя : {name}
 Телеграм : {telegram}
 Номер телефона : {phone}
-Курс : IELTS
+Курс : {course}
 Дата : {datetime.today()}"""
         base_url = f'https://api.telegram.org/bot5503829283:AAFSA7ItBst8xhf-Lg_9cqa8iPOPGe4HA2s/sendMessage?chat_id=-851393242&text={text}'
         requests.get(base_url)
